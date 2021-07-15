@@ -27,4 +27,4 @@ Aansluitingen:
 
 ## Hoe werkt het 
 
-<a href="https://ibb.co/txGC0PY"><img src="https://ibb.co/P5Jqsqd" alt="2020-11-06-4" border="0"></a>
+<a href="https://ibb.co/P5Jqsqd"><img src="https://ibb.co/P5Jqsqd" alt="2020-11-06-4" border="0"></a>
