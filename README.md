@@ -1,5 +1,7 @@
 # Arduino-counter
 
+<img src="https://i.ibb.co/VWfk4pV/IMG-20200529-WA0009.jpg" alt="IMG-20200529-WA0009" border="0">
+
 Voor mijn korte stage heb ik gewerkt met een Arduino UNO bij de broedplaats van ANNNA die is gevestigd in Beverwijk. Voor de locatie was het van belang dat er 
 bij wordt gehouden hoeveel mensen er zich in het gebouw bevinden ivm met brand en de veiligheid hiervan. Voor de Broedplaats heb ik met drie andere studenten die hier ook stage hebben
 gelopen een design sprint gedaan voor het ontwerpen van een mensenteller die mensen telt zodra ze naar binnen gaan, deze houd die dan bij gedurende de dag.
