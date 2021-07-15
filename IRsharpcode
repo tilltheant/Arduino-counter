@@ -1,0 +1,110 @@
+int count=0;
+boolean state1 = true;
+boolean state2 = true;
+boolean insideState = false;
+boolean outsideIr=false;
+boolean isPeopleExiting=false;
+int i=1;
+
+int LED = 12;
+int LED1 = 13;
+
+#include <SharpIR.h>
+
+// Define model and input pin:
+#define IRPin A0
+#define IRPin1 A1
+#define model 1080
+
+// var voor het meten van de data
+int distance_cm;
+int distance_cm2;
+
+
+boolean s1=false;
+boolean s2=false;
+
+SharpIR mySensor = SharpIR(IRPin, model);
+SharpIR mySensor2 = SharpIR(IRPin1, model);
+
+
+void setup() {
+ Serial.begin(9600);
+ pinMode (LED, OUTPUT);
+  pinMode (LED1, OUTPUT);
+ 
+}
+
+void loop() {
+
+  distance_cm = mySensor.distance();
+  distance_cm2 = mySensor2.distance();
+  
+ //boolean maken van de afstanden
+  if (distance_cm > 10 && distance_cm <40){
+    s1=true;
+   
+   } else {
+    s1=false;
+    
+    }
+  
+  if (distance_cm2 > 10 && distance_cm2 <40){
+      s2=true;
+    
+    } else {
+      
+      s2=false;
+    }
+// code voor mensen optellen en aftrekken
+
+if (!s1 && i==1 && state1){
+     outsideIr=true;
+     delay(100);
+     i++;
+     state1 = false;
+  }
+
+   if (!s2 && i==2 &&   state2){
+     Serial.println("Naar binnen");
+     outsideIr=true;
+     delay(100);
+     i = 1 ;
+     count++;
+     Serial.print("hoeveelheid mensen in de broedmachine: ");
+     Serial.println(count);
+     digitalWrite(LED1, HIGH);
+     state2 = false;
+  }
+
+   if (!s2 && i==1 && state2 ){
+     outsideIr=true;
+     delay(100);
+     i = 2 ;
+     state2 = false;
+  }
+
+  if (!s1 && i==2 && state1 ){
+     Serial.println("Naar buiten");
+     outsideIr=true;
+     delay(100);
+     count--;
+       Serial.print("hoeveelheid mensen in de broedmachine: ");
+       Serial.println(count);
+       digitalWrite(LED, HIGH);
+       
+     i = 1;
+     state1 = false;
+  }  
+
+    if (s1){
+     state1 = true;
+    }
+
+     if (s2){
+     state2 = true;
+    }
+
+
+
+}
