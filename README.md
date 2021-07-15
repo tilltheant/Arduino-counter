@@ -26,5 +26,6 @@ Aansluitingen:
 
 
 ## Hoe werkt het 
+De twee sensoren worden van elkaar geplaats parallel tegen dezelfde muur zodra een van de twee sensoren een beweging detecteer telt hij een persoon eraf of erbij afhankelijk van welke kan de persoon komt.
 
-<a href="https://ibb.co/P5Jqsqd"><img src="https://ibb.co/P5Jqsqd" alt="2020-11-06-4" border="0"></a>
+<img src="https://i.ibb.co/RCtRGRq/Naamloos-document-1.png" alt="Naamloos-document-1" border="0">
